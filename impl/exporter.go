@@ -90,10 +90,10 @@ func (e *Exporter) flushData() error {
 	if err != nil {
 		return errors.Wrap(err, "Failed to flush writer")
 	}
-	_, err = e.consumer.Commit()
-	if err != nil {
-		err = errors.Wrap(err, "Failed to commit messages")
-		return err
-	}
+	//_, err = e.consumer.Commit()
+	//if err != nil {
+	//	err = errors.Wrap(err, "Failed to commit messages")
+	//	return err
+	//}
 	return nil
 }
